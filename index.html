@@ -5,143 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forcast</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            font-family: sans-serif;
-        }
-
-        main {
-            width: 100%;
-        }
-
-        header {
-            max-width: 1320px;
-            margin: auto;
-            border: 1px solid #ccc;
-            background-color: black;
-        }
-
-        header h2 {
-            text-align: center;
-            font-size: 30px;
-            font-weight: bold;
-            padding: 10px 0px;
-            color: #fff;
-        }
-
-        .weather {
-            max-width: 1320px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 0px;
-
-        }
-
-        .weather-left {
-            flex-basis: 18%;
-        }
-
-        .weather-left form {
-            width: 100%;
-        }
-
-        .weather-left form h3 {
-            font-size: 24px;
-            margin: 10px 0px;
-            font-weight: bold;
-        }
-
-        .weather-left form input[type="search"] {
-            padding: 10px;
-            height: 30px;
-            border-radius: 5px;
-            border: 1px solid black;
-            width: 100%;
-        }
-
-        .weather-left form button {
-            padding: 10px;
-            font-size: 20px;
-            text-align: center;
-            width: 100%;
-            background-color: lightblue;
-            color: black;
-            margin: 10px 0px 20px 0px;
-            border: none;
-        }
-
-        .history-city {
-            border-top: 1px solid grey;
-            padding-top: 20px;
-        }
-
-        .history-city ul li {
-            list-style: none;
-            background-color: lightgrey;
-            height: 20px;
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .weather-right {
-            flex-basis: 75%;
-        }
-
-        .weather-right-city {
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
-
-        .weather-right-city h3 {
-            font-size: 20px;
-            font-weight: bold;
-            columns: #282828;
-        }
-
-        .temp,
-        .wind,
-        .huimdity {
-            margin: 14px 0px;
-        }
-
-        .temp h4,
-        .wind h4,
-        .huimdity h4 {
-            font-size: 15px;
-        }
-
-        .weather-present {}
-
-        .weather-present h4 {
-            font-size: 18px;
-            margin: 10px 0px;
-            font-weight: bold;
-        }
-
-        .weather-content-inner {
-            display: flex;
-            justify-content: space-between;
-            gap: 2%;
-            flex-wrap: wrap;
-        }
-
-        .weather-content-items {
-            background: blue;
-            padding: 30px 20px;
-            color: #fff;
-            flex-basis: 14%;
-            margin-bottom: 20px;
-
-        }
-
-        span {
-            margin-left: 7px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -160,34 +24,20 @@
                 </form>
                 <div class="history-city">
                     <ul>
-                        <li>Atlanta</li>
-                        <li>Atlanta</li>
-                        <li>Atlanta</li>
-                        <li>Atlanta</li>
-                        <li>Atlanta</li>
+
+
                     </ul>
                 </div>
             </div>
             <div class="weather-right">
                 <div class="weather-right-city">
-                    <!-- <div class="weather-city-show">
-                    <h3>Atlanta City</h3><img src="" />
-                    <div class="temp">
-                        <h4>Temp:<span>75<sup>o</sup>F</span></h4>
-                    </div>
-                    <div class="wind">
-                        <h4>Wind:<span>856MPH</span></h4>
-                    </div>
-                    <div class="humidity">
-                        <h4>Humidity:<span>75%</span></h4>
-                    </div>
-                    </div> -->
+                 
 
                 </div>
                 <div class="weather-present">
                     <h4>5-day Forecast</h4>
                     <div class="weather-content-inner">
-                        <!-- <div class="weather-content-items">
+                        <div class="weather-content-items">
                             <h3>9/14/2021</h3>
                             <img src="" alt="">
                             <div class="temp">
@@ -199,109 +49,67 @@
                             <div class="humidity">
                                 <h4>Humidity:<span>75%</span></h4>
                             </div>
-                        </div> -->
-                      
+                        </div>
+                        <div class="weather-content-items">
+                            <h3>9/14/2021</h3>
+                            <img src="" alt="">
+                            <div class="temp">
+                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
+                            </div>
+                            <div class="wind">
+                                <h4>Wind:<span>856MPH</span></h4>
+                            </div>
+                            <div class="humidity">
+                                <h4>Humidity:<span>75%</span></h4>
+                            </div>
+                        </div>
+                        <div class="weather-content-items">
+                            <h3>9/14/2021</h3>
+                            <img src="" alt="">
+                            <div class="temp">
+                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
+                            </div>
+                            <div class="wind">
+                                <h4>Wind:<span>856MPH</span></h4>
+                            </div>
+                            <div class="humidity">
+                                <h4>Humidity:<span>75%</span></h4>
+                            </div>
+                        </div>
+                        <div class="weather-content-items">
+                            <h3>9/14/2021</h3>
+                            <img src="" alt="">
+                            <div class="temp">
+                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
+                            </div>
+                            <div class="wind">
+                                <h4>Wind:<span>856MPH</span></h4>
+                            </div>
+                            <div class="humidity">
+                                <h4>Humidity:<span>75%</span></h4>
+                            </div>
+                        </div>
+                       
+                        <div class="weather-content-items">
+                            <h3>9/14/2021</h3>
+                            <img src="" alt="">
+                            <div class="temp">
+                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
+                            </div>
+                            <div class="wind">
+                                <h4>Wind:<span>856MPH</span></h4>
+                            </div>
+                            <div class="humidity">
+                                <h4>Humidity:<span>75%</span></h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 </body>
-<script>
-    let weatherForm = document.querySelector("#weatherForm");
+<script src="./js/script.js"></script>  
 
-    let historyData = document.querySelector("#historycity");
-    let weatherContentInner = document.querySelector(".weather-right-city")
-    let weatherFivedays=document.querySelector(".weather-content-inner")
-
-     async function weatherFormData(){
-        weatherForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-         let oldCityData = e.target.weatherCityName.value;
-
-      displayWeatherCity(oldCityData) 
-      showFiveDayForecast(oldCityData)
-    })
-
-       }
-       weatherFormData()
-    //display weather accoding to input city;
-    async function displayWeatherCity(cityName) {
-
-        const apiKey = `4d8fb5b93d4af21d66a2948710284366`;
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=jaipur&appid=${cityName}&units=metric`;
-        let fetchData = await fetch(url)
-       .then((data)=>data.json()) 
-         .then((appData) => {  
-            let { main, sys, weather, wind, name } = appData
-
-//today's Date
-let currentDay = new Date();
-let currentDate = currentDay.getDate();
-let currentMonth = currentDay.getMonth() + 1;
-let currentyear = currentDay.getFullYear();
-let todaySData = `${currentDate}/${currentMonth}/${currentyear}`
-
-
-for(var i=0; i<5;i++){
-    weatherFivedays.innerHTML += ` <div class="weather-city-show">
-                    <h3>${name} ${i+1}  ${todaySData+i+1}</h3><img src="" />
-                    <div class="temp">
-                        <h4>Temp:<span>${main.temp}<sup>o</sup>F</span></h4>
-                    </div>
-                    <div class="wind">
-                        <h4>Wind:<span>${wind.speed}MPH</span></h4>
-                    </div>
-                    <div class="humidity">
-                        <h4>Humidity:<span>${main.humidity}%</span></h4>
-                    </div>
-                    </div>` 
-}
-
-
-
-
-      
-                   if(cityName!==name){
-                    weatherContentInner.innerHTML = ` <div class="weather-city-show">
-                    <h3>${name}  ${todaySData}</h3><img src="" />
-                    <div class="temp">
-                        <h4>Temp:<span>${main.temp}<sup>o</sup>F</span></h4>
-                    </div>
-                    <div class="wind">
-                        <h4>Wind:<span>${wind.speed}MPH</span></h4>
-                    </div>
-                    <div class="humidity">
-                        <h4>Humidity:<span>${main.humidity}%</span></h4>
-                    </div>
-                    </div>`  
-                }
-
-
-               
-            })
-    }
-    displayWeatherCity()
-
-
-
-
-    function showFiveDayForecast(data) {
-
-
-
-    console.log(data)
-    for (let i = 0; i < data.list.length; i = i + 8) {
-      console.log(data.list[i]);
-
-      // getting the day name for the weather forecast
-      let time = new Date(data.list[i].dt * 1000);
-      let day = time.toDateString().split(" ")[0];
-      console.log(day);
-
-    }
-}
-showFiveDayForecast()
-</script>
 
 </html>

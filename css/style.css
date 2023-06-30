@@ -1,0 +1,143 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+main {
+    width: 100%;
+}
+
+header {
+    max-width: 1320px;
+    margin: auto;
+    border: 1px solid #ccc;
+    background-color: black;
+}
+
+header h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 0px;
+    color: #fff;
+}
+
+.weather {
+    max-width: 1320px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+
+}
+
+.weather-left {
+    flex-basis: 18%;
+}
+
+.weather-left form {
+    width: 100%;
+}
+
+.weather-left form h3 {
+    font-size: 24px;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+.weather-left form input[type="search"] {
+    padding: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.weather-left form button {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: lightblue;
+    color: black;
+    margin: 10px 0px 20px 0px;
+    border: none;
+}
+
+.history-city {
+    border-top: 1px solid grey;
+    padding-top: 20px;
+}
+
+.history-city ul li {
+    list-style: none;
+    background-color: lightgrey;
+    height: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.activeListItems {
+    background-color: #c6b8b8 !important;
+}
+
+.weather-right {
+    flex-basis: 75%;
+}
+
+.weather-right-city {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.weather-right-city h3 {
+    font-size: 20px;
+    font-weight: bold;
+    columns: #282828;
+}
+
+.temp,
+.wind,
+.huimdity {
+    margin: 14px 0px;
+}
+
+.temp h4,
+.wind h4,
+.huimdity h4 {
+    font-size: 15px;
+}
+
+.weather-present {}
+
+.weather-present h4 {
+    font-size: 18px;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+.weather-content-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+    flex-wrap: wrap;
+}
+
+.weather-content-items {
+    background: blue;
+    padding: 30px 20px;
+    color: #fff;
+    flex-basis: 14%;
+    margin-bottom: 20px;
+
+}
+
+span {
+    margin-left: 7px;
+}
