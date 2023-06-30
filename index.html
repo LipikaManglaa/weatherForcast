@@ -187,7 +187,7 @@
                 <div class="weather-present">
                     <h4>5-day Forecast</h4>
                     <div class="weather-content-inner">
-                        <div class="weather-content-items">
+                        <!-- <div class="weather-content-items">
                             <h3>9/14/2021</h3>
                             <img src="" alt="">
                             <div class="temp">
@@ -199,72 +199,8 @@
                             <div class="humidity">
                                 <h4>Humidity:<span>75%</span></h4>
                             </div>
-                        </div>
-                        <div class="weather-content-items">
-                            <h3>9/14/2021</h3>
-                            <img src="" alt="">
-                            <div class="temp">
-                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
-                            </div>
-                            <div class="wind">
-                                <h4>Wind:<span>856MPH</span></h4>
-                            </div>
-                            <div class="humidity">
-                                <h4>Humidity:<span>75%</span></h4>
-                            </div>
-                        </div>
-                        <div class="weather-content-items">
-                            <h3>9/14/2021</h3>
-                            <img src="" alt="">
-                            <div class="temp">
-                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
-                            </div>
-                            <div class="wind">
-                                <h4>Wind:<span>856MPH</span></h4>
-                            </div>
-                            <div class="humidity">
-                                <h4>Humidity:<span>75%</span></h4>
-                            </div>
-                        </div>
-                        <div class="weather-content-items">
-                            <h3>9/14/2021</h3>
-                            <img src="" alt="">
-                            <div class="temp">
-                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
-                            </div>
-                            <div class="wind">
-                                <h4>Wind:<span>856MPH</span></h4>
-                            </div>
-                            <div class="humidity">
-                                <h4>Humidity:<span>75%</span></h4>
-                            </div>
-                        </div>
-                        <div class="weather-content-items">
-                            <h3>9/14/2021</h3>
-                            <img src="" alt="">
-                            <div class="temp">
-                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
-                            </div>
-                            <div class="wind">
-                                <h4>Wind:<span>856MPH</span></h4>
-                            </div>
-                            <div class="humidity">
-                                <h4>Humidity:<span>75%</span></h4>
-                            </div>
-                        </div>
-                        <div class="weather-content-items">
-                            <h3>9/14/2021</h3>
-                            <img src="" alt="">
-                            <div class="temp">
-                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
-                            </div>
-                            <div class="wind">
-                                <h4>Wind:<span>856MPH</span></h4>
-                            </div>
-                            <div class="humidity">
-                                <h4>Humidity:<span>75%</span></h4>
-                            </div>
-                        </div>
+                        </div> -->
+                      
                     </div>
                 </div>
             </div>
@@ -278,31 +214,54 @@
     let weatherContentInner = document.querySelector(".weather-right-city")
     let weatherFivedays=document.querySelector(".weather-content-inner")
 
-    weatherForm.addEventListener("submit", (e) => {
+     async function weatherFormData(){
+        weatherForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        let oldCityData = e.target.weatherCityName.value;
+         let oldCityData = e.target.weatherCityName.value;
 
-       displayWeatherCity(oldCityData) 
-
+      displayWeatherCity(oldCityData) 
+      showFiveDayForecast(oldCityData)
     })
 
-
+       }
+       weatherFormData()
     //display weather accoding to input city;
     async function displayWeatherCity(cityName) {
 
         const apiKey = `4d8fb5b93d4af21d66a2948710284366`;
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
-        let fetchData = await fetch(url);
-        let finalData = await fetchData.json();
-        
-        let { main, sys, weather, wind, name } = finalData
-console.log(finalData)
-        //today's Date
-        let currentDay = new Date();
-        let currentDate = currentDay.getDate();
-        let currentMonth = currentDay.getMonth() + 1;
-        let currentyear = currentDay.getFullYear();
-       let todaySData = `${currentDate}/${currentMonth}/${currentyear}`
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=jaipur&appid=${cityName}&units=metric`;
+        let fetchData = await fetch(url)
+       .then((data)=>data.json()) 
+         .then((appData) => {  
+            let { main, sys, weather, wind, name } = appData
+
+//today's Date
+let currentDay = new Date();
+let currentDate = currentDay.getDate();
+let currentMonth = currentDay.getMonth() + 1;
+let currentyear = currentDay.getFullYear();
+let todaySData = `${currentDate}/${currentMonth}/${currentyear}`
+
+
+for(var i=0; i<5;i++){
+    weatherFivedays.innerHTML += ` <div class="weather-city-show">
+                    <h3>${name} ${i+1}  ${todaySData+i+1}</h3><img src="" />
+                    <div class="temp">
+                        <h4>Temp:<span>${main.temp}<sup>o</sup>F</span></h4>
+                    </div>
+                    <div class="wind">
+                        <h4>Wind:<span>${wind.speed}MPH</span></h4>
+                    </div>
+                    <div class="humidity">
+                        <h4>Humidity:<span>${main.humidity}%</span></h4>
+                    </div>
+                    </div>` 
+}
+
+
+
+
+      
                    if(cityName!==name){
                     weatherContentInner.innerHTML = ` <div class="weather-city-show">
                     <h3>${name}  ${todaySData}</h3><img src="" />
@@ -318,8 +277,31 @@ console.log(finalData)
                     </div>`  
                 }
 
+
+               
+            })
     }
     displayWeatherCity()
+
+
+
+
+    function showFiveDayForecast(data) {
+
+
+
+    console.log(data)
+    for (let i = 0; i < data.list.length; i = i + 8) {
+      console.log(data.list[i]);
+
+      // getting the day name for the weather forecast
+      let time = new Date(data.list[i].dt * 1000);
+      let day = time.toDateString().split(" ")[0];
+      console.log(day);
+
+    }
+}
+showFiveDayForecast()
 </script>
 
 </html>
