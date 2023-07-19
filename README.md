@@ -1,6 +1,6 @@
 # weatherForcast
 
-# workSchedule
+
 
 This is a weather forcast  application using HTML, CSS, and Javascript. In this application ,user can search curent weather and next five days weather according to their search city. Even you don't need to search again and again if you already search because you can see searched city  in the left side,just click on it , see weather of your choice. if user can search same city, ,can see message that alrady exist  by Toast Plugin so its easier for user to not to type again , jsut click on left side searched cities. you can delete from search history if you want
 
