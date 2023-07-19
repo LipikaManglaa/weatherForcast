@@ -8,8 +8,8 @@ This is a weather forcast  application using HTML, CSS, and Javascript. In this 
 
 This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. Or, download the sources files to use this as a template.
 
-* [GitHub Repository]
-* [Deployed GitHub IO]
+* [GitHub Repository]https://github.com/LipikaManglaa/weatherForcast.git
+* [Deployed GitHub IO]https://lipikamanglaa.github.io/weatherForcast/
 
 
 
