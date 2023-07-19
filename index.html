@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forcast</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"  />
+    
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
 </head>
 
 <body>
@@ -19,7 +23,7 @@
             <div class="weather-left">
                 <form action="" id="weatherForm">
                     <h3>Search for a City:</h3>
-                    <input type="search" placeholder="city Name" name="weatherCityName" /><br />
+                    <input type="search" placeholder="city Name" name="weatherCityName" id="userrInput" value=""/><br />
                     <button type="submit">Search</button>
                 </form>
                 <div class="history-city">
@@ -37,78 +41,21 @@
                 <div class="weather-present">
                     <h4>5-day Forecast</h4>
                     <div class="weather-content-inner">
-                        <div class="weather-content-items">
-                            <h3>9/14/2021</h3>
-                            <img src="" alt="">
-                            <div class="temp">
-                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
-                            </div>
-                            <div class="wind">
-                                <h4>Wind:<span>856MPH</span></h4>
-                            </div>
-                            <div class="humidity">
-                                <h4>Humidity:<span>75%</span></h4>
-                            </div>
-                        </div>
-                        <div class="weather-content-items">
-                            <h3>9/14/2021</h3>
-                            <img src="" alt="">
-                            <div class="temp">
-                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
-                            </div>
-                            <div class="wind">
-                                <h4>Wind:<span>856MPH</span></h4>
-                            </div>
-                            <div class="humidity">
-                                <h4>Humidity:<span>75%</span></h4>
-                            </div>
-                        </div>
-                        <div class="weather-content-items">
-                            <h3>9/14/2021</h3>
-                            <img src="" alt="">
-                            <div class="temp">
-                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
-                            </div>
-                            <div class="wind">
-                                <h4>Wind:<span>856MPH</span></h4>
-                            </div>
-                            <div class="humidity">
-                                <h4>Humidity:<span>75%</span></h4>
-                            </div>
-                        </div>
-                        <div class="weather-content-items">
-                            <h3>9/14/2021</h3>
-                            <img src="" alt="">
-                            <div class="temp">
-                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
-                            </div>
-                            <div class="wind">
-                                <h4>Wind:<span>856MPH</span></h4>
-                            </div>
-                            <div class="humidity">
-                                <h4>Humidity:<span>75%</span></h4>
-                            </div>
-                        </div>
+ 
                        
-                        <div class="weather-content-items">
-                            <h3>9/14/2021</h3>
-                            <img src="" alt="">
-                            <div class="temp">
-                                <h4>Temp:<span>75<sup>o</sup>F</span></h4>
-                            </div>
-                            <div class="wind">
-                                <h4>Wind:<span>856MPH</span></h4>
-                            </div>
-                            <div class="humidity">
-                                <h4>Humidity:<span>75%</span></h4>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 </body>
+<script
+src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+crossorigin="anonymous"
+></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
 <script src="./js/script.js"></script>  
 
 
